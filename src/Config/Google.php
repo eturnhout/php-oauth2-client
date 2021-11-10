@@ -2,7 +2,7 @@
 
 namespace Evt\OAuth2Client\Config;
 
-class Google extends AbstractConfig
+class Google extends BaseConfig
 {
     const AUTH_URI = 'https://accounts.google.com/o/oauth2/auth';
     const TOKEN_URI = 'https://accounts.google.com/o/oauth2/token';

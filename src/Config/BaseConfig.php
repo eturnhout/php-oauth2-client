@@ -2,7 +2,7 @@
 
 namespace Evt\OAuth2Client\Config;
 
-class AbstractConfig
+class BaseConfig
 {
     /**
      * Your app's client id

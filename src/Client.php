@@ -2,7 +2,7 @@
 
 namespace Evt\OAuth2Client;
 
-use Evt\OAuth2Client\Config\AbstractConfig;
+use Evt\OAuth2Client\Config\BaseConfig;
 use GuzzleHttp\Client as HttpClient;
 
 class Client
@@ -10,7 +10,7 @@ class Client
     /**
      * Your app's configurations
      *
-     * @var \Evt\OAuth2Client\AbstractConfig
+     * @var \Evt\OAuth2Client\Config\BaseConfig
      */
     protected $config;
 
@@ -21,20 +21,20 @@ class Client
      */
     protected $httpClient;
 
-    public function __construct(AbstractConfig $config)
+    public function __construct(BaseConfig $config)
     {
         $this->setConfig($config);
         $this->httpClient = new HttpClient();
     }
 
-    public function setConfig(AbstractConfig $config) : self
+    public function setConfig(BaseConfig $config) : self
     {
         $this->config = $config;
 
         return $this;
     }
 
-    public function getConfig() : AbstractConfig
+    public function getConfig() : BaseConfig
     {
         return $this->config;
     }
